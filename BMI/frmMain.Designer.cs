@@ -49,6 +49,32 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.tpPessoas = new System.Windows.Forms.TabPage();
+            this.btnPessoaNovo = new System.Windows.Forms.Button();
+            this.btnPessoaPesq = new System.Windows.Forms.Button();
+            this.btnPessoaAlterar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbPessoaPapel = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbPessoaCidade = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbPessoaEstado = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpDataNasc = new System.Windows.Forms.DateTimePicker();
+            this.gpPessoaStatus = new System.Windows.Forms.GroupBox();
+            this.radioPessoaInativa = new System.Windows.Forms.RadioButton();
+            this.radioPessoaAtivo = new System.Windows.Forms.RadioButton();
+            this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
+            this.tbCodPessoa = new System.Windows.Forms.TextBox();
+            this.btnCancelaPessoa = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnSairPessoa = new System.Windows.Forms.Button();
+            this.btnSalvarPessoa = new System.Windows.Forms.Button();
+            this.tbNomePessoa = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblNomePessoa = new System.Windows.Forms.Label();
+            this.gpSexo = new System.Windows.Forms.GroupBox();
+            this.radioPessoaFem = new System.Windows.Forms.RadioButton();
+            this.radioPessoaMasc = new System.Windows.Forms.RadioButton();
             this.tpUsuarios = new System.Windows.Forms.TabPage();
             this.btnCancelarCad = new System.Windows.Forms.Button();
             this.btnPesqUsr = new System.Windows.Forms.Button();
@@ -74,23 +100,13 @@
             this.tbLoginUsr = new System.Windows.Forms.TextBox();
             this.tabPages = new System.Windows.Forms.TabControl();
             this.tpPapeis = new System.Windows.Forms.TabPage();
-            this.lblNomePessoa = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.btnSalvarPessoa = new System.Windows.Forms.Button();
-            this.btnSairPessoa = new System.Windows.Forms.Button();
             this.mainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.tpPessoas.SuspendLayout();
+            this.gpPessoaStatus.SuspendLayout();
+            this.gpSexo.SuspendLayout();
             this.tpUsuarios.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPages.SuspendLayout();
@@ -245,24 +261,290 @@
             // tpPessoas
             // 
             this.tpPessoas.BackColor = System.Drawing.Color.Gainsboro;
+            this.tpPessoas.Controls.Add(this.btnPessoaNovo);
+            this.tpPessoas.Controls.Add(this.btnPessoaPesq);
+            this.tpPessoas.Controls.Add(this.btnPessoaAlterar);
+            this.tpPessoas.Controls.Add(this.label12);
+            this.tpPessoas.Controls.Add(this.cbPessoaPapel);
+            this.tpPessoas.Controls.Add(this.label11);
+            this.tpPessoas.Controls.Add(this.cbPessoaCidade);
+            this.tpPessoas.Controls.Add(this.label8);
+            this.tpPessoas.Controls.Add(this.cbPessoaEstado);
+            this.tpPessoas.Controls.Add(this.label7);
+            this.tpPessoas.Controls.Add(this.dtpDataNasc);
+            this.tpPessoas.Controls.Add(this.gpPessoaStatus);
+            this.tpPessoas.Controls.Add(this.mtbCPF);
+            this.tpPessoas.Controls.Add(this.tbCodPessoa);
+            this.tpPessoas.Controls.Add(this.btnCancelaPessoa);
+            this.tpPessoas.Controls.Add(this.label9);
             this.tpPessoas.Controls.Add(this.btnSairPessoa);
             this.tpPessoas.Controls.Add(this.btnSalvarPessoa);
-            this.tpPessoas.Controls.Add(this.textBox5);
-            this.tpPessoas.Controls.Add(this.textBox4);
-            this.tpPessoas.Controls.Add(this.textBox3);
-            this.tpPessoas.Controls.Add(this.textBox2);
-            this.tpPessoas.Controls.Add(this.textBox1);
+            this.tpPessoas.Controls.Add(this.tbNomePessoa);
             this.tpPessoas.Controls.Add(this.label10);
-            this.tpPessoas.Controls.Add(this.label9);
-            this.tpPessoas.Controls.Add(this.label8);
-            this.tpPessoas.Controls.Add(this.label7);
             this.tpPessoas.Controls.Add(this.lblNomePessoa);
+            this.tpPessoas.Controls.Add(this.gpSexo);
             this.tpPessoas.Location = new System.Drawing.Point(4, 22);
             this.tpPessoas.Name = "tpPessoas";
             this.tpPessoas.Padding = new System.Windows.Forms.Padding(3);
             this.tpPessoas.Size = new System.Drawing.Size(1576, 620);
             this.tpPessoas.TabIndex = 1;
             this.tpPessoas.Text = "Pessoas";
+            // 
+            // btnPessoaNovo
+            // 
+            this.btnPessoaNovo.Location = new System.Drawing.Point(1223, 72);
+            this.btnPessoaNovo.Name = "btnPessoaNovo";
+            this.btnPessoaNovo.Size = new System.Drawing.Size(75, 23);
+            this.btnPessoaNovo.TabIndex = 33;
+            this.btnPessoaNovo.Text = "Novo";
+            this.btnPessoaNovo.UseVisualStyleBackColor = true;
+            // 
+            // btnPessoaPesq
+            // 
+            this.btnPessoaPesq.Location = new System.Drawing.Point(1223, 106);
+            this.btnPessoaPesq.Name = "btnPessoaPesq";
+            this.btnPessoaPesq.Size = new System.Drawing.Size(75, 23);
+            this.btnPessoaPesq.TabIndex = 32;
+            this.btnPessoaPesq.Text = "Pesquisar";
+            this.btnPessoaPesq.UseVisualStyleBackColor = true;
+            this.btnPessoaPesq.Click += new System.EventHandler(this.btnPessoaPesq_Click);
+            // 
+            // btnPessoaAlterar
+            // 
+            this.btnPessoaAlterar.Location = new System.Drawing.Point(1223, 142);
+            this.btnPessoaAlterar.Name = "btnPessoaAlterar";
+            this.btnPessoaAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnPessoaAlterar.TabIndex = 31;
+            this.btnPessoaAlterar.Text = "Alterar";
+            this.btnPessoaAlterar.UseVisualStyleBackColor = true;
+            this.btnPessoaAlterar.Click += new System.EventHandler(this.btnPessoaAlterar_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(612, 217);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 15);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Papel pessoa:";
+            // 
+            // cbPessoaPapel
+            // 
+            this.cbPessoaPapel.FormattingEnabled = true;
+            this.cbPessoaPapel.Location = new System.Drawing.Point(615, 235);
+            this.cbPessoaPapel.Name = "cbPessoaPapel";
+            this.cbPessoaPapel.Size = new System.Drawing.Size(188, 21);
+            this.cbPessoaPapel.TabIndex = 29;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(612, 168);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(154, 15);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Cidade de nascimento:";
+            // 
+            // cbPessoaCidade
+            // 
+            this.cbPessoaCidade.FormattingEnabled = true;
+            this.cbPessoaCidade.Location = new System.Drawing.Point(615, 186);
+            this.cbPessoaCidade.Name = "cbPessoaCidade";
+            this.cbPessoaCidade.Size = new System.Drawing.Size(188, 21);
+            this.cbPessoaCidade.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(612, 119);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 15);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Estado de nascimento:";
+            // 
+            // cbPessoaEstado
+            // 
+            this.cbPessoaEstado.FormattingEnabled = true;
+            this.cbPessoaEstado.Location = new System.Drawing.Point(615, 137);
+            this.cbPessoaEstado.Name = "cbPessoaEstado";
+            this.cbPessoaEstado.Size = new System.Drawing.Size(188, 21);
+            this.cbPessoaEstado.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(612, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 15);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Data de nascimento:";
+            // 
+            // dtpDataNasc
+            // 
+            this.dtpDataNasc.CustomFormat = "";
+            this.dtpDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataNasc.Location = new System.Drawing.Point(615, 89);
+            this.dtpDataNasc.MaxDate = new System.DateTime(2012, 12, 31, 0, 0, 0, 0);
+            this.dtpDataNasc.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpDataNasc.Name = "dtpDataNasc";
+            this.dtpDataNasc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpDataNasc.Size = new System.Drawing.Size(136, 20);
+            this.dtpDataNasc.TabIndex = 7;
+            this.dtpDataNasc.Value = new System.DateTime(2012, 12, 31, 0, 0, 0, 0);
+            // 
+            // gpPessoaStatus
+            // 
+            this.gpPessoaStatus.BackColor = System.Drawing.Color.Silver;
+            this.gpPessoaStatus.Controls.Add(this.radioPessoaInativa);
+            this.gpPessoaStatus.Controls.Add(this.radioPessoaAtivo);
+            this.gpPessoaStatus.Location = new System.Drawing.Point(233, 69);
+            this.gpPessoaStatus.Name = "gpPessoaStatus";
+            this.gpPessoaStatus.Size = new System.Drawing.Size(201, 49);
+            this.gpPessoaStatus.TabIndex = 22;
+            this.gpPessoaStatus.TabStop = false;
+            this.gpPessoaStatus.Text = "Status";
+            // 
+            // radioPessoaInativa
+            // 
+            this.radioPessoaInativa.AutoSize = true;
+            this.radioPessoaInativa.Location = new System.Drawing.Point(112, 20);
+            this.radioPessoaInativa.Name = "radioPessoaInativa";
+            this.radioPessoaInativa.Size = new System.Drawing.Size(57, 17);
+            this.radioPessoaInativa.TabIndex = 4;
+            this.radioPessoaInativa.TabStop = true;
+            this.radioPessoaInativa.Text = "Inativo";
+            this.radioPessoaInativa.UseVisualStyleBackColor = true;
+            // 
+            // radioPessoaAtivo
+            // 
+            this.radioPessoaAtivo.AutoSize = true;
+            this.radioPessoaAtivo.Location = new System.Drawing.Point(17, 20);
+            this.radioPessoaAtivo.Name = "radioPessoaAtivo";
+            this.radioPessoaAtivo.Size = new System.Drawing.Size(49, 17);
+            this.radioPessoaAtivo.TabIndex = 3;
+            this.radioPessoaAtivo.TabStop = true;
+            this.radioPessoaAtivo.Text = "Ativo";
+            this.radioPessoaAtivo.UseVisualStyleBackColor = true;
+            // 
+            // mtbCPF
+            // 
+            this.mtbCPF.HidePromptOnLeave = true;
+            this.mtbCPF.Location = new System.Drawing.Point(55, 187);
+            this.mtbCPF.Mask = "000,000,000-00";
+            this.mtbCPF.Name = "mtbCPF";
+            this.mtbCPF.Size = new System.Drawing.Size(139, 20);
+            this.mtbCPF.TabIndex = 2;
+            this.mtbCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // tbCodPessoa
+            // 
+            this.tbCodPessoa.Location = new System.Drawing.Point(55, 89);
+            this.tbCodPessoa.Name = "tbCodPessoa";
+            this.tbCodPessoa.Size = new System.Drawing.Size(139, 20);
+            this.tbCodPessoa.TabIndex = 0;
+            // 
+            // btnCancelaPessoa
+            // 
+            this.btnCancelaPessoa.Location = new System.Drawing.Point(1223, 176);
+            this.btnCancelaPessoa.Name = "btnCancelaPessoa";
+            this.btnCancelaPessoa.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelaPessoa.TabIndex = 17;
+            this.btnCancelaPessoa.Text = "Cancelar";
+            this.btnCancelaPessoa.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(52, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 15);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Código Pessoa:";
+            // 
+            // btnSairPessoa
+            // 
+            this.btnSairPessoa.Location = new System.Drawing.Point(1102, 522);
+            this.btnSairPessoa.Name = "btnSairPessoa";
+            this.btnSairPessoa.Size = new System.Drawing.Size(75, 23);
+            this.btnSairPessoa.TabIndex = 11;
+            this.btnSairPessoa.Text = "Sair";
+            this.btnSairPessoa.UseVisualStyleBackColor = true;
+            this.btnSairPessoa.Click += new System.EventHandler(this.btnSairPessoa_Click);
+            // 
+            // btnSalvarPessoa
+            // 
+            this.btnSalvarPessoa.Location = new System.Drawing.Point(1200, 522);
+            this.btnSalvarPessoa.Name = "btnSalvarPessoa";
+            this.btnSalvarPessoa.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvarPessoa.TabIndex = 10;
+            this.btnSalvarPessoa.Text = "Salvar";
+            this.btnSalvarPessoa.UseVisualStyleBackColor = true;
+            // 
+            // tbNomePessoa
+            // 
+            this.tbNomePessoa.Location = new System.Drawing.Point(55, 137);
+            this.tbNomePessoa.Name = "tbNomePessoa";
+            this.tbNomePessoa.Size = new System.Drawing.Size(379, 20);
+            this.tbNomePessoa.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(52, 167);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 15);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "CPF:";
+            // 
+            // lblNomePessoa
+            // 
+            this.lblNomePessoa.AutoSize = true;
+            this.lblNomePessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomePessoa.Location = new System.Drawing.Point(52, 117);
+            this.lblNomePessoa.Name = "lblNomePessoa";
+            this.lblNomePessoa.Size = new System.Drawing.Size(112, 15);
+            this.lblNomePessoa.TabIndex = 0;
+            this.lblNomePessoa.Text = "Nome completo:";
+            // 
+            // gpSexo
+            // 
+            this.gpSexo.BackColor = System.Drawing.Color.Silver;
+            this.gpSexo.Controls.Add(this.radioPessoaFem);
+            this.gpSexo.Controls.Add(this.radioPessoaMasc);
+            this.gpSexo.Location = new System.Drawing.Point(233, 187);
+            this.gpSexo.Name = "gpSexo";
+            this.gpSexo.Size = new System.Drawing.Size(201, 47);
+            this.gpSexo.TabIndex = 21;
+            this.gpSexo.TabStop = false;
+            this.gpSexo.Text = "Sexo:";
+            // 
+            // radioPessoaFem
+            // 
+            this.radioPessoaFem.AutoSize = true;
+            this.radioPessoaFem.Location = new System.Drawing.Point(112, 19);
+            this.radioPessoaFem.Name = "radioPessoaFem";
+            this.radioPessoaFem.Size = new System.Drawing.Size(67, 17);
+            this.radioPessoaFem.TabIndex = 6;
+            this.radioPessoaFem.TabStop = true;
+            this.radioPessoaFem.Text = "Feminino";
+            this.radioPessoaFem.UseVisualStyleBackColor = true;
+            // 
+            // radioPessoaMasc
+            // 
+            this.radioPessoaMasc.AutoSize = true;
+            this.radioPessoaMasc.Location = new System.Drawing.Point(17, 19);
+            this.radioPessoaMasc.Name = "radioPessoaMasc";
+            this.radioPessoaMasc.Size = new System.Drawing.Size(73, 17);
+            this.radioPessoaMasc.TabIndex = 5;
+            this.radioPessoaMasc.TabStop = true;
+            this.radioPessoaMasc.Text = "Masculino";
+            this.radioPessoaMasc.UseVisualStyleBackColor = true;
             // 
             // tpUsuarios
             // 
@@ -529,110 +811,6 @@
             this.tpPapeis.Text = "Papéis";
             this.tpPapeis.UseVisualStyleBackColor = true;
             // 
-            // lblNomePessoa
-            // 
-            this.lblNomePessoa.AutoSize = true;
-            this.lblNomePessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomePessoa.Location = new System.Drawing.Point(29, 35);
-            this.lblNomePessoa.Name = "lblNomePessoa";
-            this.lblNomePessoa.Size = new System.Drawing.Size(112, 15);
-            this.lblNomePessoa.TabIndex = 0;
-            this.lblNomePessoa.Text = "Nome completo:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 298);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 15);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Nome completo:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 226);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 15);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Nome completo:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 160);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 15);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Nome completo:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(29, 101);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 15);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Nome completo:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(32, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(348, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(32, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(348, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(32, 190);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(348, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(32, 263);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(348, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(32, 330);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(348, 20);
-            this.textBox5.TabIndex = 9;
-            // 
-            // btnSalvarPessoa
-            // 
-            this.btnSalvarPessoa.Location = new System.Drawing.Point(1202, 536);
-            this.btnSalvarPessoa.Name = "btnSalvarPessoa";
-            this.btnSalvarPessoa.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvarPessoa.TabIndex = 10;
-            this.btnSalvarPessoa.Text = "Salvar";
-            this.btnSalvarPessoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSairPessoa
-            // 
-            this.btnSairPessoa.Location = new System.Drawing.Point(1093, 536);
-            this.btnSairPessoa.Name = "btnSairPessoa";
-            this.btnSairPessoa.Size = new System.Drawing.Size(75, 23);
-            this.btnSairPessoa.TabIndex = 11;
-            this.btnSairPessoa.Text = "Sair";
-            this.btnSairPessoa.UseVisualStyleBackColor = true;
-            this.btnSairPessoa.Click += new System.EventHandler(this.btnSairPessoa_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -657,6 +835,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.tpPessoas.ResumeLayout(false);
             this.tpPessoas.PerformLayout();
+            this.gpPessoaStatus.ResumeLayout(false);
+            this.gpPessoaStatus.PerformLayout();
+            this.gpSexo.ResumeLayout(false);
+            this.gpSexo.PerformLayout();
             this.tpUsuarios.ResumeLayout(false);
             this.tpUsuarios.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -713,17 +895,31 @@
         private System.Windows.Forms.Button btnNovoUsr;
         private System.Windows.Forms.TabPage tpPapeis;
         private System.Windows.Forms.Button btnCancelarCad;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNomePessoa;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblNomePessoa;
         private System.Windows.Forms.Button btnSairPessoa;
         private System.Windows.Forms.Button btnSalvarPessoa;
+        private System.Windows.Forms.MaskedTextBox mtbCPF;
+        private System.Windows.Forms.TextBox tbCodPessoa;
+        private System.Windows.Forms.Button btnCancelaPessoa;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox gpSexo;
+        private System.Windows.Forms.RadioButton radioPessoaMasc;
+        private System.Windows.Forms.RadioButton radioPessoaFem;
+        private System.Windows.Forms.GroupBox gpPessoaStatus;
+        private System.Windows.Forms.RadioButton radioPessoaInativa;
+        private System.Windows.Forms.RadioButton radioPessoaAtivo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpDataNasc;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cbPessoaPapel;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbPessoaCidade;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbPessoaEstado;
+        private System.Windows.Forms.Button btnPessoaNovo;
+        private System.Windows.Forms.Button btnPessoaPesq;
+        private System.Windows.Forms.Button btnPessoaAlterar;
     }
 }

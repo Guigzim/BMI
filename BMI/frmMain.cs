@@ -116,6 +116,7 @@ namespace BMI
             DisableFieldsUsr();
             btnPesqUsr.Enabled = true;
             btnNovoUsr.Enabled = true;
+            btnNovoUsr.Focus();
         }
         private void DisableFieldsUsr()
         {
@@ -719,10 +720,35 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             tabPages.TabPages.Add(tpPessoas);
             tabPages.SelectedTab = tpPessoas;
             tabPages.Show();
+
+            disableFieldsPessoa();
+            btnPessoaNovo.Enabled = true;
+            btnPessoaPesq.Enabled = true;
+            btnPessoaNovo.Focus();
+        }
+
+        private void disableFieldsPessoa()
+        {
+            tbCodPessoa.Enabled = false;
+            tbNomePessoa.Enabled = false;
+            radioPessoaAtivo.Enabled = false;
+            radioPessoaInativa.Enabled = false;
+            radioPessoaMasc.Enabled = false;
+            radioPessoaFem.Enabled = false;
+            mtbCPF.Enabled = false;
+            dtpDataNasc.Enabled = false;
+            cbPessoaCidade.Enabled = false;
+            cbPessoaEstado.Enabled = false;
+            cbPessoaPapel.Enabled = false;
+            btnPessoaAlterar.Enabled = false;
+            btnSalvarPessoa.Enabled = false;
+            btnCancelaPessoa.Enabled = false;
+            btnPessoaNovo.Enabled = false;
+            btnPessoaPesq.Enabled = false;
         }
         private void btnSairPessoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja realmente sair do cadastro de usuários?\n\nTodas as alterações não salvas serão perdidas.", "Mensagem",
+            if (MessageBox.Show("Deseja realmente sair do cadastro de pessoas?\n\nTodas as alterações não salvas serão perdidas.", "Mensagem",
 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 tabPages.TabPages.Remove(tpPessoas);
@@ -734,6 +760,19 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             }
         }
         #endregion
+
+        private void btnPessoaPesq_Click(object sender, EventArgs e)
+        {
+            PessoaPesquisa frmPesqPessoa = new PessoaPesquisa();
+            frmPesqPessoa.ShowDialog();
+        }
+        private void btnPessoaAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
         //Fim da region TabPessoas
     }
 }
